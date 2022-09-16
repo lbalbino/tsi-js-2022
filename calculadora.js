@@ -16,5 +16,5 @@ if ( Validaentrada(servico) && Validaentrada(prazo)) {
 function Validaentrada(dadoUsuario){
 
     return dadoUsuario >= 0 && dadoUsuario <= 2 ? true : false;
-}
+} 
 
