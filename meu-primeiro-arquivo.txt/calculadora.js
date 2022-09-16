@@ -1,20 +1,21 @@
-let tabela =  [['$$$', '$$','$'],
-                ['$$$$' ,'$$' , '$$'],
-                ['--','--','$$$']];
 
-let servico = prompt ("entre com o servico \n0 - troca de óleo \n1 - balanceamento \n2 - cambagem");                
-let prazo = prompt ("entre com o prazo: \n0 - um dia \n1 - dois dias \n2 - tres dias");
+let btnCalcular = document.getElementById('calcular');
 
-if ( Validaentrada(servico) && Validaentrada(prazo)) {
+btnCalcular.addEventListener('click',function(evento) {
+    evento.preventDefault();
 
-    alert("O serviços ficará em: " + tabela[servico][prazo]);
+    let serv = document.getElementById('servico');
+    let prazo = document.getElementById('prazo');
+    let res = document.getElementById('resultado');
+    console.log(serv.value);
 
-}else {
-    alert("ERRO: Verifique os valores inseridos e tente novamente!");
-}
 
-function Validaentrada(dadoUsuario){
+    res.innerText = 'Funcionou!';
 
-    return dadoUsuario >= 0 && dadoUsuario <= 2 ? true : false;
-} 
+    console.log(serv.value);
+
+    console.log(evento);
+
+
+});
 
