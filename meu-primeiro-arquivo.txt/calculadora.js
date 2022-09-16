@@ -8,9 +8,9 @@ btnCalcular.addEventListener('click',function(evento) {
     let prazo = document.getElementById('prazo');
     let res = document.getElementById('resultado');
     
-    let preco = CalcularPreco(serv, prazo);
+    let preco = CalcularPreco(serv.value, prazo.value);
 
-    res.innerText = 'Funcionou!';
+    res.innerText = `O preço é ${preco}`;
 
     console.log(serv.value);
 
@@ -25,5 +25,7 @@ function CalcularPreco( servico, prazo) {
                  ['$$$$', '$$$', '$$'], 
                  ['Não faz', 'Não faz', '$$$']];
     
+
+        return tabela[servico][prazo];                 
 }
 
